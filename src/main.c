@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
   } s;
 
   s.num = 1;
-  printf("struct s num: %d", s.num);
+  printf("struct s num: %d\n", s.num);
 
   return 0;
 }
