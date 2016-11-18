@@ -24,6 +24,6 @@
 node_modules
 npm-debug.log
 .idea/*
-exec
 *.sw*
 *.un~
+exec/
