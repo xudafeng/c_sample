@@ -1,11 +1,9 @@
 exec = exec
-CLIB = -F /System/Library/PrivateFrameworks -framework login
+SCREENSAVER_CLIB = -F /System/Library/PrivateFrameworks -framework login -framework ApplicationServices
 
 all: mkdir
 	$(CC) -v
-	$(CC) -c src/main.c && $(CC) -o ./exec/exec main.o && ./exec/exec
-screensaver: mkdir
-	$(CC) src/screensaver.c -O2 -o ./exec/screensaver -framework ApplicationServices $(CLIB)
+	$(CC) c_sample/screensaver.c $(SCREENSAVER_CLIB) -O2 -o ./$(exec)/screensaver
 mkdir:
 	@if [ ! -d $(exec) ] ; then mkdir $(exec) ; fi
 
